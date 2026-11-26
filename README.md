@@ -1,4 +1,4 @@
-# Arena Desktop 简体中文汉化包
+# Arena Desktop 简体中文汉化补丁
 
 [![目标版本](https://img.shields.io/badge/target-Windows%20%7C%20Arena%20Desktop%201.6.0-2563eb?style=flat-square)](https://github.com/Denxer6/Arena-Desktop-1.6.0-Windows/releases/tag/arena-desktop-1.6.0-zh-cn)
 [![发布状态](https://img.shields.io/badge/status-pre--release-f59e0b?style=flat-square)](https://github.com/Denxer6/Arena-Desktop-1.6.0-Windows/releases/tag/arena-desktop-1.6.0-zh-cn)
