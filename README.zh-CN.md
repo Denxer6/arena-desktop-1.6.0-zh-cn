@@ -1,8 +1,34 @@
 # Arena Desktop 简体中文汉化包
 
+[![目标版本](https://img.shields.io/badge/target-Windows%20%7C%20Arena%20Desktop%201.6.0-2563eb?style=flat-square)](https://github.com/Denxer6/shine/releases/tag/arena-desktop-1.6.0-zh-cn)
+[![发布状态](https://img.shields.io/badge/status-pre--release-f59e0b?style=flat-square)](https://github.com/Denxer6/shine/releases/tag/arena-desktop-1.6.0-zh-cn)
+[![非官方社区发布](https://img.shields.io/badge/release-unofficial-6b7280?style=flat-square)](https://github.com/PlayzAe/arena.ai-desktop)
+
+<p align="center">
+  <a href="https://github.com/PlayzAe/arena.ai-desktop/blob/v1.6.0/docs/screenshots/home.png">
+    <img src="https://github.com/PlayzAe/arena.ai-desktop/blob/v1.6.0/docs/screenshots/home.png?raw=1" alt="Arena Desktop 上游 v1.6.0 界面预览；不是本汉化补丁的实机截图" width="820">
+  </a>
+</p>
+<p align="center"><sub>上游 Arena Desktop v1.6.0 原始界面预览，并非本补丁运行截图。来源：<a href="https://github.com/PlayzAe/arena.ai-desktop/blob/v1.6.0/docs/screenshots/home.png">上游截图</a>；上游许可：<a href="https://github.com/PlayzAe/arena.ai-desktop/blob/v1.6.0/LICENSE">MIT LICENSE</a>。</sub></p>
+
 本仓库重新发布一份面向特定 **Windows Arena Desktop 1.6.0** 构建的简体中文界面补丁，并保留随附的源码/开发 ZIP。它是非官方社区发布，不隶属于、也未获得 Arena AI Inc. 或上游项目作者认可。Arena Desktop 上游项目：[PlayzAe/arena.ai-desktop](https://github.com/PlayzAe/arena.ai-desktop)；[上游版本发布页](https://github.com/PlayzAe/arena.ai-desktop/releases)。
 
 感谢 **PlayzAe** 及所有上游贡献者开发 Arena Desktop。此仓库仅整理并提供所附汉化资料，不代表上游项目，也不对上游产品或在线服务作保证。
+
+## 三大特点与适用范围图解
+
+| 🧷 版本校验 | 💾 原版备份 | 🌐 翻译范围有限 |
+| --- | --- | --- |
+| 安装脚本按包内固定 SHA-256 匹配目标 EXE；不匹配即报错。 | 首次安装时在应用目录保存原版备份；提供 `Restore.cmd`。 | 只替换指定的界面资源；Arena 网页、模型名、回复及用户输入不会被翻译。 |
+
+```mermaid
+flowchart LR
+    A["Windows Arena Desktop 1.6.0<br/>原版 EXE"] --> B["补丁资源<br/>ui.bin + toc.bin"]
+    B --> C["应用本地界面"]
+    C -. "范围之外" .-> D["网页 · 模型名<br/>模型回复 · 用户输入"]
+```
+
+此图为资源作用范围示意，不是汉化效果截图或实机验证结果。
 
 ## 版本与适用范围
 
@@ -49,13 +75,39 @@ Get-FileHash .\create-chinese-patch.zip -Algorithm SHA256
 
 脚本声明会在改写前校验原版 EXE 的 SHA-256，并校验生成的补丁文件哈希；不匹配时报告错误且不应继续替换。此处仅检查了脚本文本，没有实际执行或独立审计其运行行为。
 
+```mermaid
+flowchart TD
+    A["下载 ZIP 并核对 SHA-256"] --> B["完全退出 Arena Desktop"]
+    B --> C["解压到独立目录<br/>审阅 .cmd / .ps1"]
+    C --> D["运行 Install.cmd"]
+    D --> E{"EXE 原版哈希匹配？"}
+    E -- "否" --> X["报错并停止<br/>不要改用其他版本"]
+    E -- "是" --> F["创建原版备份<br/>生成并校验补丁文件"]
+    F --> G["报告成功后重启应用"]
+```
+
 ## 还原
 
 退出应用后，在补丁文件夹中双击 `Restore.cmd`。如果安装时指定了自定义 EXE 路径，还原时也需选择对应的 `Arena-Desktop.exe`（包内说明提及可将该文件拖到 `Restore.cmd` 上）。脚本需要同目录的原版备份文件，并会校验备份哈希。
 
 如果备份缺失、校验失败或还原报错，不要尝试用其他版本的文件拼接或覆盖；从可信上游来源取得与适用版本匹配的原版安装文件，按上游说明恢复/重新安装。还原前同样应完全退出应用。
 
+```mermaid
+flowchart LR
+    A["退出应用"] --> B["运行 Restore.cmd"]
+    B --> C{"原版备份存在且哈希正确？"}
+    C -- "是" --> D["还原原版 EXE 并校验"]
+    C -- "否" --> E["停止；使用可信上游原版安装文件恢复"]
+```
+
 ## 安全、系统要求与已知限制
+
+| 项目 | 要求 / 说明 |
+| --- | --- |
+| 操作系统 | 随附上游说明描述 Windows 10/11；未在本仓库设备上实测。 |
+| 应用版本 | Windows Arena Desktop 1.6.0，且 EXE 必须与补丁内记录的原版 SHA-256 完全匹配。 |
+| 运行环境 | `Install.cmd` / `Restore.cmd` 调用 Windows 命令提示符与 Windows PowerShell；目标目录需可读写。 |
+| 上游组件 | 随附上游 README 提及 WebView2 Runtime；请按上游版本说明核实系统需求。 |
 
 - 这是会替换本机应用 EXE 内容的二进制补丁，不是只读语言包。修改应用文件有造成程序无法启动、更新冲突或触发安全软件告警的风险。
 - `Install.cmd`/`Restore.cmd` 会调用 Windows PowerShell，并带有 `-ExecutionPolicy Bypass` 参数。运行前应审阅 ZIP 中的 `.cmd` 与 `.ps1` 文件；不要因为哈希匹配就假定脚本安全，也不要在不理解风险时运行。
