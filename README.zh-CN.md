@@ -1,7 +1,7 @@
 # Arena Desktop 简体中文汉化包
 
-[![目标版本](https://img.shields.io/badge/target-Windows%20%7C%20Arena%20Desktop%201.6.0-2563eb?style=flat-square)](https://github.com/Denxer6/shine/releases/tag/arena-desktop-1.6.0-zh-cn)
-[![发布状态](https://img.shields.io/badge/status-pre--release-f59e0b?style=flat-square)](https://github.com/Denxer6/shine/releases/tag/arena-desktop-1.6.0-zh-cn)
+[![目标版本](https://img.shields.io/badge/target-Windows%20%7C%20Arena%20Desktop%201.6.0-2563eb?style=flat-square)](https://github.com/Denxer6/Arena-Desktop-1.6.0-Windows/releases/tag/arena-desktop-1.6.0-zh-cn)
+[![发布状态](https://img.shields.io/badge/status-pre--release-f59e0b?style=flat-square)](https://github.com/Denxer6/Arena-Desktop-1.6.0-Windows/releases/tag/arena-desktop-1.6.0-zh-cn)
 [![非官方社区发布](https://img.shields.io/badge/release-unofficial-6b7280?style=flat-square)](https://github.com/PlayzAe/arena.ai-desktop)
 
 <p align="center">
@@ -138,7 +138,7 @@ Arena Desktop 名称、相关商标和上游项目内容仍归各自权利人所
 
 ## 贡献与反馈
 
-欢迎通过本仓库的 [Issues](https://github.com/Denxer6/shine/issues) 报告文档错误、哈希不匹配或可复现的问题。请勿在公开 issue 中贴出账号 Cookie、令牌、个人文件、日志中的敏感信息或其他凭据。翻译、补丁逻辑和上游应用本身的问题也可分别向[上游项目](https://github.com/PlayzAe/arena.ai-desktop/issues)反馈。
+欢迎通过本仓库的 [Issues](https://github.com/Denxer6/Arena-Desktop-1.6.0-Windows/issues) 报告文档错误、哈希不匹配或可复现的问题。请勿在公开 issue 中贴出账号 Cookie、令牌、个人文件、日志中的敏感信息或其他凭据。翻译、补丁逻辑和上游应用本身的问题也可分别向[上游项目](https://github.com/PlayzAe/arena.ai-desktop/issues)反馈。
 
 提交问题时请说明 Windows 版本、Arena Desktop 版本、使用的 ZIP 文件名以及复现步骤；不要为了收集信息而运行尚未审阅的补丁。此仓库不作持续维护、响应时限或未来版本兼容承诺。
 
