@@ -1,8 +1,13 @@
-# Arena Desktop 简体中文汉化包
+# Arena Desktop 简体中文汉化补丁
 
 [![目标版本](https://img.shields.io/badge/target-Windows%20%7C%20Arena%20Desktop%201.6.0-2563eb?style=flat-square)](https://github.com/Denxer6/Arena-Desktop-1.6.0-Windows/releases/tag/arena-desktop-1.6.0-zh-cn)
 [![发布状态](https://img.shields.io/badge/status-pre--release-f59e0b?style=flat-square)](https://github.com/Denxer6/Arena-Desktop-1.6.0-Windows/releases/tag/arena-desktop-1.6.0-zh-cn)
 [![非官方社区发布](https://img.shields.io/badge/release-unofficial-6b7280?style=flat-square)](https://github.com/PlayzAe/arena.ai-desktop)
+
+<p align="center">
+  <img src="assets/screenshots/arena-zh-cn.png" alt="Arena Desktop 简体中文界面截图，由用户提供" width="1000">
+</p>
+<p align="center"><sub>用户提供的 Arena Desktop 简体中文界面预览。图片仅用于展示界面，不代表本仓库已验证补丁安装、目标版本或功能状态。</sub></p>
 
 <p align="center">
   <a href="https://github.com/PlayzAe/arena.ai-desktop/blob/v1.6.0/docs/screenshots/home.png">

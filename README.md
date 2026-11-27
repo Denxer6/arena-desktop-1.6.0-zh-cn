@@ -5,6 +5,11 @@
 [![非官方社区发布](https://img.shields.io/badge/release-unofficial-6b7280?style=flat-square)](https://github.com/PlayzAe/arena.ai-desktop)
 
 <p align="center">
+  <img src="assets/screenshots/arena-zh-cn.png" alt="Arena Desktop 简体中文界面截图，由用户提供" width="1000">
+</p>
+<p align="center"><sub>用户提供的 Arena Desktop 简体中文界面预览。图片仅用于展示界面，不代表本仓库已验证补丁安装、目标版本或功能状态。</sub></p>
+
+<p align="center">
   <a href="https://github.com/PlayzAe/arena.ai-desktop/blob/v1.6.0/docs/screenshots/home.png">
     <img src="https://github.com/PlayzAe/arena.ai-desktop/blob/v1.6.0/docs/screenshots/home.png?raw=1" alt="Arena Desktop 上游 v1.6.0 界面预览；不是本汉化补丁的实机截图" width="820">
   </a>
